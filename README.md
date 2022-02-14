@@ -2,11 +2,14 @@
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)   
 
+Kevin Williams | [LinkedIn](https://linkedin.com/in/k9w) | [Twitter](https://twitter.com/k9w)
+
 Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email](mailto:<liamthelastson@gmail.com>) | [website](https://lionturtle99.github.io/my-portfolio/)
 
 Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mailto:<jwtill@icloud.com>) 
 
 Mikah Mathews | [LinkedIn](https://www.linkedin.com/in/mikah-mathews/) | [email](mailto:<mikah@outofband.org>) 
+
 
 ## About this project
 {SCREENSHOT}

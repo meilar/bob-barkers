@@ -6,6 +6,8 @@ Kevin Williams | [LinkedIn](https://linkedin.com/in/k9w) | [Twitter](https://twi
 ## About this project
 {SCREENSHOT}
 
+This is an Epicodus team week project.
+
 ## Get Started
 
 ### The Hard Way

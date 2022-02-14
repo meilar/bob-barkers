@@ -7,6 +7,8 @@ Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mai
 ## About this project
 {SCREENSHOT}
 
+This is an Epicodus team week project.
+
 ## Get Started
 
 ### The Hard Way

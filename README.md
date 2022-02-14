@@ -2,6 +2,8 @@
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)
 
+Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mailto:<jwtill@icloud.com>) 
+
 ## About this project
 {SCREENSHOT}
 

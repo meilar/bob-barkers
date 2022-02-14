@@ -2,7 +2,7 @@
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)   
 
-Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email](liamthelastson@gmail.com) | [website](https://lionturtle99.github.io/my-portfolio/)
+Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email](mailto:<liamthelastson@gmail.com>) | [website](https://lionturtle99.github.io/my-portfolio/)
 
 Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mailto:<jwtill@icloud.com>) 
 

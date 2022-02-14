@@ -5,6 +5,8 @@ Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mai
 ## About this project
 {SCREENSHOT}
 
+This is an Epicodus team week project.
+
 ## Get Started
 
 ### The Hard Way

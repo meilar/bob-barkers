@@ -1,4 +1,4 @@
-<h1 align="center">{CHANGE ME}</h1>
+<h1 align="center">The Price is Right!</h1>
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)
 

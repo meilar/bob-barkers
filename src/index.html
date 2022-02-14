@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Template</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the product cost!!!</title>
 </head>
+
 <body>
-<h1>Template</h1>
+  <div class="container">
+    <div class="justify-content-center">
+      <div class="row">
+        <h1>Guess the price</h1>
+      </div>
+      <div class="row">
+        <div class="card my-auto" id="instructions" style="width: 18rem;">
+          <img src="./assets/images/big-barker.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Instructions</h5>
+            <p class="card-text">Guess the cost of the item and receive points. You start with x number of lives. If you
+              guess over, lose a life.</p>
+            <button id="start" class="btn btn-primary">Let's go!</a>
+          </div>  
+      </div>
+      </div>
+      <div id="active-game">
+        <div id="score"></div>
+        <div id="lives"></div>
+        <div id="item">
+          <img>
+          <span id="descipton"></span>
+          <h2>Guess the Price</h2>
+          <label for="price-guess"></label>
+          <input id="price-guess" type="number" name="price-guess">
+          <button id="submit-price">Submit Price</button>
+        </div>
+      </div>
+      <div id="game-over">
+        <div id="score"></div>
+        <h2>Sorry, you have no more lives. Thanks for playing. Want to try again?</h2>
+        <button id="start">Play Again</button>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

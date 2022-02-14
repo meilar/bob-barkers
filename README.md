@@ -1,6 +1,7 @@
 <h1 align="center">{CHANGE ME}</h1>
 
 Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mailto:<meilar@gmail.com>) | [website](https://www.mattheweilar.com)
+Kevin Williams | [LinkedIn](https://linkedin.com/in/k9w) | [Twitter](https://twitter.com/k9w)
 
 ## About this project
 {SCREENSHOT}

@@ -11,7 +11,7 @@ Mikah Mathews | [LinkedIn](https://www.linkedin.com/in/mikah-mathews/) | [email]
 ## About this project
 {SCREENSHOT}
 
-This is an Epicodus team week project.
+This is the devils work
 
 ## Get Started
 

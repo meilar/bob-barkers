@@ -6,6 +6,8 @@ Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email
 
 Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mailto:<jwtill@icloud.com>) 
 
+Mikah Mathews | [LinkedIn](https://www.linkedin.com/in/mikah-mathews/) | [email](mailto:<mikah@outofband.org>) 
+
 ## About this project
 {SCREENSHOT}
 

@@ -9,7 +9,7 @@ Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mai
 ## About this project
 {SCREENSHOT}
 
-This is an Epicodus team week project.
+This is an Khan Academyh team week project.
 
 ## Get Started
 

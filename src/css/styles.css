@@ -1,13 +1,12 @@
 body {
-  background-image: linear-gradient(45deg,  
-     rgba(124, 40, 145, 0.8), rgba(217, 91, 132, 1)), url("https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg"); 
+  background-image: linear-gradient(to bottom,  
+     rgba(124, 40, 145, 0.6), rgba(255, 255, 255, .4)), url("https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg"); 
 }
 .container {
   text-align: center;
   background-color: red;
   background: linear-gradient(red, purple);
-  opacity: .9;
-  margin-bottom: 40px;
+  opacity: .85;
 
 
   

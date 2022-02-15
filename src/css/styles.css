@@ -1,7 +1,23 @@
-
+body {
+  background-image: url("https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg");
+  background-color:purple;
+  background: linear-gradient(purple, black);
+}
 .container {
   text-align: center;
-  background-image: url("https://www.myneobuxportal.com/wp-content/uploads/2021/03/guess-the-price-quiz/featured.jpg.webp");
+  background-color: red;
+  background: linear-gradient(red, purple);
+  opacity: .9;
+
+
+  
+ padding: 10px;
+ margin-top: 40px;
+  /* opacity: .7; */
+  border-radius: 10px;
+  /* background-image: url("https://www.myneobuxportal.com/wp-content/uploads/2021/03/guess-the-price-quiz/featured.jpg.webp");
+  background-repeat: no-repeat, repeat; */
+  
 }
 
 /* #active-game, #game-over {
@@ -16,11 +32,18 @@
 }
 
 #header {
+  margin:auto;
   margin-top: 5%;
   margin-bottom: 5%;
+  padding: 10px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-align: center;
+  background-color: yellow;
+   opacity: .9;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60%;
 }
 
 .card {

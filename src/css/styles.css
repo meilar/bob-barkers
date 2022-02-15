@@ -7,6 +7,7 @@ body {
   background-color: red;
   background: linear-gradient(red, purple);
   opacity: .9;
+  margin-bottom: 40px;
 
 
   
@@ -26,9 +27,9 @@ body {
 
 /* Matt's Style */
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 #header {
   margin:auto;

@@ -24,8 +24,7 @@ export default class Player {
     } else {
       this.points += 2;
     }
-    this.turn += 1;
-    
+    this.turn += 1;    
   }
 
   endLogic() {

@@ -27,6 +27,7 @@ $(document).ready(function() {
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
+    $("#video")[0].src += "?autoplay=1";
     let searchCategory = //Add in Category selection buttons with endpoint values
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {

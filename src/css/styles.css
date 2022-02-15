@@ -32,3 +32,45 @@
 .card p {
   text-align: justify;
 }
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 25px;
+  margin: 0 8px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 25px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 25px;
+  position: absolute;
+  width: 25px;
+}
+
+.heart:before {
+  top: -12px;
+  left: 0;
+}
+
+.heart:after {
+  left: 12px;
+  top: 0;
+}
+
+.heart .dead {
+  background-color: gray;
+}
+
+.heart:after .dead {
+  background-color: gray;
+}

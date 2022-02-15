@@ -1,7 +1,29 @@
-.container {
-  text-align: center;
-}
 
 /* #active-game, #game-over {
   display: none;
 } */
+
+
+/* Matt's Style */
+
+.hidden {
+  display: none;
+}
+
+#header {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card {
+  max-width: 60%;
+  min-width: 18rem;
+  text-align: center;
+}
+
+.card p {
+  text-align: justify;
+}

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import AmazonService from './js/amazonService.js';
 import Player from './js/gameLogic.js';
+
 let player1 = new Player(3, 0, 0); 
 
 
@@ -54,8 +55,7 @@ $(document).ready(function() {
   $("#new-product").on('click', function(){ // for switching out the product and hiding the results screen
     i ++; // global variable increments every time time the function is called
     $("#results-screen").hide();
-    console.log(productArray);
-    displayProduct(productArray);
+    displayProduct(productArray, i);
   });
 
 });

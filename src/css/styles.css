@@ -1,7 +1,22 @@
-
+body {
+  background-image: linear-gradient(to bottom,  
+     rgba(124, 40, 145, 0.6), rgba(255, 255, 255, .4)), url("https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg"); 
+}
 .container {
   text-align: center;
-  background-image: url("https://www.myneobuxportal.com/wp-content/uploads/2021/03/guess-the-price-quiz/featured.jpg.webp");
+  background-color: red;
+  background: linear-gradient(red, purple);
+  opacity: .85;
+
+
+  
+ padding: 10px;
+ margin-top: 40px;
+  /* opacity: .7; */
+  border-radius: 10px;
+  /* background-image: url("https://www.myneobuxportal.com/wp-content/uploads/2021/03/guess-the-price-quiz/featured.jpg.webp");
+  background-repeat: no-repeat, repeat; */
+  
 }
 
 /* #active-game, #game-over {
@@ -11,16 +26,23 @@
 
 /* Matt's Style */
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 #header {
+  margin:auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
+  padding: 10px;
+  font-family: 'Lobster', cursive;
+  
   text-align: center;
+  background-color: yellow;
+   opacity: .9;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60%;
 }
 
 .card {
@@ -31,4 +53,48 @@
 
 .card p {
   text-align: justify;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 25px;
+  margin: 0 8px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 25px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 25px;
+  position: absolute;
+  width: 25px;
+}
+
+.heart:before {
+  top: -12px;
+  left: 0;
+}
+
+.heart:after {
+  left: 12px;
+  top: 0;
+}
+
+.heart .dead {
+  background-color: gray;
+}
+
+.heart:after .dead {
+  background-color: gray;
 }

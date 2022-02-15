@@ -32,8 +32,10 @@ function displayPrice(userGuess, price) {
 $(document).ready(function() { 
   let productArray;
   let i = 0;
-  $("#start").on('click', function() {
-    let searchCategory = "kitchen";//Add in Category selection buttons with endpoint values
+
+  $("#start-game").on('click', function() {
+    $("#video")[0].src += "?autoplay=1";
+    let searchCategory = //Add in Category selection buttons with endpoint values
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {
         throw Error(`There was an unexpected error: ${response.message}`);

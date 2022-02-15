@@ -1,7 +1,8 @@
 export default class Player {
-  constructor(hearts, points) {
+  constructor(hearts, points, turns) {
     this.hearts = hearts;
     this.points = points;
+    this.turns = turns;
   }
 
   guessCheck(playerGuess, itemPrice) {
@@ -23,7 +24,17 @@ export default class Player {
     } else {
       this.points += 2;
     }
-
+    this.turn += 1;
   }
 
+  endLogic() {
+    if (this.heart === 0) {
+      return "loose";
+    }
+    if (this.turn === 5) {
+      this.turn = 0;
+      return true;
+    } 
+    return;
+  }
 }

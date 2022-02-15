@@ -1,3 +1,7 @@
-#active-game, #game-over {
-  display: none;
+.container {
+  text-align: center;
 }
+
+/* #active-game, #game-over {
+  display: none;
+} */

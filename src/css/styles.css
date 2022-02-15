@@ -1,1 +1,7 @@
-/* custom stylesheet */
+.container {
+  text-align: center;
+}
+
+/* #active-game, #game-over {
+  display: none;
+} */

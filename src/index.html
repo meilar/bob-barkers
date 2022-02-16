@@ -34,6 +34,20 @@
               Good luck!</p>
             <p class="card-text">Here it comes! From the famous Bob Barker Studio at CBS Hollywood, it's <strong>The
                 Everything Store!</strong></p>
+            <div class="categories row">
+              <label>
+                <input type="radio" name="searchCategory" value="hi" checked>
+                Tools & Home Improvement
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="videogames">
+                Video Games
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="officeproducts">
+                Office Products
+              </label>
+            </div>
             <div id="start-game" class="btn btn-primary">Let's play!
               <iframe id="video" width="1" height="1" src="https://www.youtube.com/embed/G8iOmVd1W_g"
                 title="YouTube video player" frameborder="0"
@@ -43,19 +57,18 @@
           </div>
         </div>
       </div>
-      <div class="row" id="active-game">
+      <div class="row hidden" id="active-game">
         <div class="d-flex justify-content-center">
           <div class="card">
             <img src="https://www.dana.lol/2018/03/07/photos-behind-the-scenes-at-the-price-is-right/from-the-stage-opt.JPG" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 id="item-name" class="card-title">ITEM NAME GOES HERE</h5>
-              <p id="item-desc" class="card-text">Item description will go here.</p>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Current Score: <span id="player-points"></span>Player points go here</li>
                 <li class="list-group-item">
-                  <span class="heart"></span>
-                  <span class="heart"></span>
-                  <span class="heart"></span>
+                  <span id="heart1" class="heart"></span>
+                  <span id="heart2" class="heart"></span>
+                  <span id="heart3" class="heart"></span>
                 </li>
                 <li class="list-group-item">
                   <label for="user-guess">Your guess</label>
@@ -85,6 +98,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="load-screen">
+    <h3 id="loading">Loading...</h3>
+  </div>
 </body>
 
 </html>

@@ -12,12 +12,16 @@ function displayErrors(error) {
 }
 
 function displayProduct(productArray, i) {
-  $("#active-game").show();
-  $("#intro").hide();
   $("#score").html(player1.points);
-  $("#lives").html(player1.hearts);
-  $("#description").html(productArray[i].title);
+  $("#item-name").html(productArray[i].title);
   $("#item-image").attr('src', `${productArray[i].image}`);
+  if (player1.hearts === 2) {
+    $("#heart1").hide();
+  } else if (player1.hearts === 1) {
+    $("#heart2").hide();
+  } else if (player1.hearts == 0) {
+    $("#heart3").hide();
+  }
 }
 
 function displayPrice(userGuess, price) {
@@ -26,22 +30,27 @@ function displayPrice(userGuess, price) {
   $("guessed").html("$"+userGuess);
   $("#won-points").html(points);
   $("#result").show(); 
-  // this is for showing the price of the product and and users points gained from guess on a results screen
 }
 
 $(document).ready(function() { 
   let productArray;
   let i = 0;
-
   $("#start-game").on('click', function() {
     $("#video")[0].src += "?autoplay=1";
-    let searchCategory = //Add in Category selection buttons with endpoint values
+
+    $("#intro").hide();
+    $(".load-screen").fadeIn();
+    setTimeout(function(){$(".load-screen").fadeOut();}, 3000);
+    setTimeout(function(){$("#intro").show();}, 30000);
+
+    let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {
         throw Error(`There was an unexpected error: ${response.message}`);
       }
       productArray = response.bestsellers;
       displayProduct(productArray, i);
+
     }) .catch(function(error) {
       displayErrors(error.message);
     });
@@ -54,7 +63,6 @@ $(document).ready(function() {
   $("#new-product").on('click', function(){ // for switching out the product and hiding the results screen
     i ++; // global variable increments every time time the function is called
     $("#results-screen").hide();
-    console.log(productArray);
     displayProduct(productArray);
   });
 

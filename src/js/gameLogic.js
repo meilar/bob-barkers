@@ -24,12 +24,12 @@ export default class Player {
     } else {
       this.points += 2;
     }
-    this.turn += 1;    
+    this.turn += 1;
   }
 
   endLogic() {
     if (this.heart === 0) {
-      return "loose";
+      return "lose";
     }
     if (this.turn === 5) {
       this.turn = 0;

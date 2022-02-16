@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Lato&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Lato&family=Lobster&display=swap"
+    rel="stylesheet">
   <title>The Everything $tore</title>
 </head>
 
@@ -57,48 +58,72 @@
           </div>
         </div>
       </div>
-      <div class="row hidden" id="active-game">
-        <div class="d-flex justify-content-center">
-          <div class="card">
-            <img src="https://www.dana.lol/2018/03/07/photos-behind-the-scenes-at-the-price-is-right/from-the-stage-opt.JPG" class="card-img-top" alt="...">
+    </div>
+    <div class="row hidden" id="active-game">
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <img src="" class="card-img-top item-image" alt="image of Amazon product">
             <div class="card-body">
-              <h5 id="item-name" class="card-title">ITEM NAME GOES HERE</h5>
+              <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Current Score: <span id="player-points"></span>Player points go here</li>
-                <li class="list-group-item">
-                  <span id="heart1" class="heart"></span>
-                  <span id="heart2" class="heart"></span>
-                  <span id="heart3" class="heart"></span>
-                </li>
-                <li class="list-group-item">
-                  <label for="user-guess">Your guess</label>
-                  <input type="number" name="user-guess" id="user-guess">
-                </li>
-                <li class="list-group-item"><button id="guess-btn" class="btn btn-primary">Guess!</button></li>
-              </ul>
-            </div>
+                <li class="list-group-item">Your current score: <span id="score"></span></li>
+              <li class="list-group-item">
+                <span class="heart" class="heart-1"></span>
+                <span class="heart" class="heart-2"></span>
+                <span class="heart" class="heart-3"></span>
+              </li>
+              <li class="list-group-item">
+                <label for="price-guess">Your guess</label>
+                <input type="number" name="price-guess" id="price-guess">
+              </li>
+              <li class="list-group-item"><button id="guess-button" class="btn btn-primary">Guess!</button></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="row hidden" id="game-over">
-        <div class="d-flex justify-content-center">
-          <div class="card">
-            <img
-              src="https://assets.considerable.com/wp-content/uploads/2020/02/12101649/price-is-right-drew-carey-746x420.jpg"
-              class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">No Showcase winner today!</h5>
-              <p class="card-text">Thank you for playing <strong>The Everything Store!</strong> Your final score was
-                <span id="final-score"></span>. We hope you'll tune in tomorrow for another game.</p>
-              <p class="card-text">And remember, help control the pet population. Have your pet spayer or neutered.
-                Goodbye, everyone!</p>
-              <button class="btn btn-primary">Play again.</button>
-            </div>
+    </div>
+    <div class="row hidden" id="result">
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <img src="" class="card-img-top item-image" alt="image of Amazon product">
+            <h5 class="card-title">ROUND RESULTS</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">You guessed: <span id="user-guess"></span></li>
+              <li class="list-group-item">The actual price is: <span id="actual-price"><span></li>
+              <li class="list-group-item">You got <span id="won-points"></span> points</li>
+              <li class="list-group-item hidden" id="wrong-guess"></li>
+              <li class="list-group-item">
+                <span class="heart" class="heart-1"></span>
+                <span class="heart" class="heart-2"></span>
+                <span class="heart" class="heart-3"></span>
+              </li>
+              <li class="list-group-item"><button id="next-round" class="btn btn-primary">Next Round!</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row hidden" id="game-over">
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <img
+            src="https://assets.considerable.com/wp-content/uploads/2020/02/12101649/price-is-right-drew-carey-746x420.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">No Showcase winner today!</h5>
+            <p class="card-text">Thank you for playing <strong>The Everything Store!</strong> Your final score was
+              <span id="final-score"></span>. We hope you'll tune in tomorrow for another game.
+            </p>
+            <p class="card-text">And remember, help control the pet population. Have your pet spayer or neutered.
+              Goodbye, everyone!</p>
+            <button class="btn btn-primary">Play again.</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="load-screen">
     <h3 id="loading">Loading...</h3>
   </div>

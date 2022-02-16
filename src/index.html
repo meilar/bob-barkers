@@ -24,37 +24,46 @@
         <div class="card">
           <img src="https://i.imgur.com/jbCqSPe.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Come on down!</h5>
-            <p class="card-text">Can you spot an online deal? Can you tell a high quality item listing from a low
-              quality one? Let's find out on <strong>The Everything Store!</strong></p>
-            <p class="card-text">We'll show you a random item for sale on Amazon.com. You will get the opportunity to
-              guess the price of this item. If you guess the correct cost of the item or less, we'll give you points
-              based on how close you came to the item's list price.</p>
-            <p class="card-text">Careful! If you guess higher than the Amazon list price, you will lose the round. Lose
-              three rounds, and the game is over. Your goal is to gather as many points as possible until the game ends.
-              Good luck!</p>
-            <p class="card-text">Here it comes! From the famous Bob Barker Studio at CBS Hollywood, it's <strong>The
-                Everything Store!</strong></p>
-            <div class="categories row">
-              <label>
-                <input type="radio" name="searchCategory" value="hi" checked>
-                Tools & Home Improvement
-              </label>
-              <label>
-                <input type="radio" name="searchCategory" value="videogames">
-                Video Games
-              </label>
-              <label>
-                <input type="radio" name="searchCategory" value="officeproducts">
-                Office Products
-              </label>
-            </div>
-            <div id="start-game" class="btn btn-primary">Let's play!
-              <iframe id="video" width="1" height="1" src="https://www.youtube.com/embed/G8iOmVd1W_g"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
-                allowfullscreen></iframe>
-            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5 class="card-title">Come on down!</h5>
+                <p class="card-text">Can you spot an online deal? Can you tell a high quality item listing from a low
+                  quality one? Let's find out on <strong>The Everything Store!</strong></p>
+                <p class="card-text">We'll show you a random item for sale on Amazon.com. You will get the opportunity
+                  to
+                  guess the price of this item. If you guess the correct cost of the item or less, we'll give you points
+                  based on how close you came to the item's list price.</p>
+                <p class="card-text">Careful! If you guess higher than the Amazon list price, you will lose the round.
+                  Lose
+                  three rounds, and the game is over. Your goal is to gather as many points as possible until the game
+                  ends.
+                  Good luck!</p>
+                <p class="card-text">Here it comes! From the famous Bob Barker Studio at CBS Hollywood, it's <strong>The
+                    Everything Store!</strong></p>
+              </li>
+              <li class="list-group-item">
+                <h5 class="card-title">Pick a Category</h5>
+                <div class="categories row">
+                  <label>
+                    <input type="radio" name="searchCategory" value="hi" checked>
+                    Tools & Home Improvement
+                  </label>
+                  <label>
+                    <input type="radio" name="searchCategory" value="videogames">
+                    Video Games
+                  </label>
+                  <label>
+                    <input type="radio" name="searchCategory" value="officeproducts">
+                    Office Products
+                  </label>
+                </div>
+                <div id="start-game" class="btn btn-primary">Let's play!
+                  <iframe id="video" width="1" height="1" src="https://www.youtube.com/embed/G8iOmVd1W_g"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
+                    allowfullscreen></iframe>
+                </div>
+              </li>
           </div>
         </div>
       </div>
@@ -63,10 +72,10 @@
       <div class="d-flex justify-content-center">
         <div class="card">
           <img src="" class="card-img-top item-image" alt="image of Amazon product">
-            <div class="card-body">
-              <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Your current score: <span id="score"></span></li>
+          <div class="card-body">
+            <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Your current score: <span id="score"></span></li>
               <li class="list-group-item">
                 <span class="heart" class="heart-1"></span>
                 <span class="heart" class="heart-2"></span>

@@ -7,19 +7,10 @@ body {
   background-color: red;
   background: linear-gradient(red, purple);
   opacity: .85;
-
-
-  
   padding: 10px;
   margin-top: 40px;
-  /* opacity: .7; */
   border-radius: 10px;
-  /* background-image: url("https://www.myneobuxportal.com/wp-content/uploads/2021/03/guess-the-price-quiz/featured.jpg.webp");
-  background-repeat: no-repeat, repeat; */
-  
 }
-
-/* Matt's Style */
 
 .hidden {
   display: none;
@@ -46,10 +37,18 @@ body {
   text-align: center;
 }
 
+.card h5 {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
 .card p {
   text-align: justify;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
+}
+.categories {
+ text-align: left;
 }
 
 .heart {
@@ -99,6 +98,9 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgb(245, 244, 244);
+}
+.btn-primary {
+  margin-top: 5%;
 }
 #loading {
   position: absolute;

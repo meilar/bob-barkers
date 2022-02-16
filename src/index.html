@@ -1,9 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Template</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Lato&family=Lobster&display=swap" rel="stylesheet">
+  <title>The Everything $tore</title>
 </head>
+
 <body>
-<h1>Template</h1>
+  <div class="container">
+    <div class="row" id="header">
+      <div class="col">
+        <h1>The Everything $tore</h1>
+      </div>
+    </div>
+    <div class="row" id="intro">
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <img src="https://i.imgur.com/jbCqSPe.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Come on down!</h5>
+            <p class="card-text">Can you spot an online deal? Can you tell a high quality item listing from a low
+              quality one? Let's find out on <strong>The Everything Store!</strong></p>
+            <p class="card-text">We'll show you a random item for sale on Amazon.com. You will get the opportunity to
+              guess the price of this item. If you guess the correct cost of the item or less, we'll give you points
+              based on how close you came to the item's list price.</p>
+            <p class="card-text">Careful! If you guess higher than the Amazon list price, you will lose the round. Lose
+              three rounds, and the game is over. Your goal is to gather as many points as possible until the game ends.
+              Good luck!</p>
+            <p class="card-text">Here it comes! From the famous Bob Barker Studio at CBS Hollywood, it's <strong>The
+                Everything Store!</strong></p>
+            <div class="categories row">
+              <label>
+                <input type="radio" name="searchCategory" value="hi" checked>
+                Tools & Home Improvement
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="videogames">
+                Video Games
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="officeproducts">
+                Office Products
+              </label>
+            </div>
+            <div id="start-game" class="btn btn-primary">Let's play!
+              <iframe id="video" width="1" height="1" src="https://www.youtube.com/embed/G8iOmVd1W_g"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row hidden" id="active-game">
+        <div class="d-flex justify-content-center">
+          <div class="card">
+            <img src="https://www.dana.lol/2018/03/07/photos-behind-the-scenes-at-the-price-is-right/from-the-stage-opt.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 id="item-name" class="card-title">ITEM NAME GOES HERE</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Current Score: <span id="player-points"></span>Player points go here</li>
+                <li class="list-group-item">
+                  <span id="heart1" class="heart"></span>
+                  <span id="heart2" class="heart"></span>
+                  <span id="heart3" class="heart"></span>
+                </li>
+                <li class="list-group-item">
+                  <label for="user-guess">Your guess</label>
+                  <input type="number" name="user-guess" id="user-guess">
+                </li>
+                <li class="list-group-item"><button id="guess-btn" class="btn btn-primary">Guess!</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row hidden" id="game-over">
+        <div class="d-flex justify-content-center">
+          <div class="card">
+            <img
+              src="https://assets.considerable.com/wp-content/uploads/2020/02/12101649/price-is-right-drew-carey-746x420.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">No Showcase winner today!</h5>
+              <p class="card-text">Thank you for playing <strong>The Everything Store!</strong> Your final score was
+                <span id="final-score"></span>. We hope you'll tune in tomorrow for another game.</p>
+              <p class="card-text">And remember, help control the pet population. Have your pet spayer or neutered.
+                Goodbye, everyone!</p>
+              <button class="btn btn-primary">Play again.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="load-screen">
+    <h3 id="loading">Loading...</h3>
+  </div>
 </body>
+
 </html>

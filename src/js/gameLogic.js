@@ -14,11 +14,11 @@ export default class Player {
       this.hearts -= 1;
     } else if (playerGuess === tenPoint) {
       this.points += 10;
-    } else if (playerGuess <= eightPoint) {
+    } else if (playerGuess >= eightPoint) {
       this.points += 8;
-    } else if (playerGuess <= sixPoint) {
+    } else if (playerGuess >= sixPoint) {
       this.points += 6;
-    } else if (playerGuess <= fourPoint) {
+    } else if (playerGuess >= fourPoint) {
       this.points += 4;
     } else {
       this.points += 2;

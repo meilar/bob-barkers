@@ -13,10 +13,11 @@ function displayErrors(error) {
 
 function refreshHearts() {
   if (player1.hearts === 2) {
-    $(".heart-3").addClass("hidden");
+    $(".heart-3").hide();
     $("#wrong-guess").html("You went over, and lost a heart!");
   } else if (player1.hearts === 1) {
-    $(".heart-2").addClass("hidden");
+    $(".heart-2").hide();
+    $("#wrong-guess").html("You went over, and lost a heart!");
   }
 }
 
@@ -29,9 +30,9 @@ function displayProduct(productArray, i) {
   $(".item-image").attr('src', `${productArray[i].image}`);
 }
 
-function displayPrice(userGuess, price) {
-  let points = player1.guessCheck(userGuess);
-  $("#actual-price").html("$"+price);
+function displayPrice(userGuess, itemPrice) {
+  let points = player1.guessCheck(userGuess, itemPrice);
+  $("#actual-price").html("$"+itemPrice);
   $("#user-guess").html("$"+userGuess);
   $("#won-points").html(points);
   refreshHearts();
@@ -43,9 +44,9 @@ function loadScreen() {
   $(".container").addClass("hidden");
   $("#intro").addClass("hidden");
   $(".load-screen").fadeIn();
-  setTimeout(function(){$(".load-screen").fadeOut();}, 3000);
-  setTimeout(function(){$(".container").removeClass("hidden");}, 3000);
-  setTimeout(function(){$("#active-game").removeClass("hidden");}, 3000);
+  setTimeout(function(){$(".load-screen").fadeOut();}, 4000);
+  setTimeout(function(){$(".container").removeClass("hidden");}, 4000);
+  setTimeout(function(){$("#active-game").removeClass("hidden");}, 4000);
 }
 
 $(document).ready(function() { 
@@ -68,15 +69,16 @@ $(document).ready(function() {
   });
 
   $("#guess-button").on('click', function(){ // for submitting guessed price for each item
-    let userGuess = $("#price-guess").val();
+    let userGuess = parseFloat($("#price-guess").val());
     $("#price-guess").val("");
-    let price = productArray[i].price.value;
-    displayPrice(userGuess, price);
+    let itemPrice = productArray[i].price.value;
+    displayPrice(userGuess, itemPrice);
   });
 
-  $("#new-product").on('click', function(){ // for switching out the product and hiding the results screen
+  $("#next-round").on('click', function(){ // for switching out the product and hiding the results screen
     i ++; // global variable increments every time time the function is called
-    $("#results-screen").hide();
+    $("#result").addClass("hidden");
+    $("#active-game").removeClass("hidden");
     displayProduct(productArray, i);
   });
 

@@ -35,6 +35,20 @@
               Good luck!</p>
             <p class="card-text">Here it comes! From the famous Bob Barker Studio at CBS Hollywood, it's <strong>The
                 Everything Store!</strong></p>
+            <div class="categories row">
+              <label>
+                <input type="radio" name="searchCategory" value="hi" checked>
+                Tools & Home Improvement
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="videogames">
+                Video Games
+              </label>
+              <label>
+                <input type="radio" name="searchCategory" value="officeproducts">
+                Office Products
+              </label>
+            </div>
             <div id="start-game" class="btn btn-primary">Let's play!
               <iframe id="video" width="1" height="1" src="https://www.youtube.com/embed/G8iOmVd1W_g"
                 title="YouTube video player" frameborder="0"
@@ -49,10 +63,10 @@
       <div class="d-flex justify-content-center">
         <div class="card">
           <img src="" class="card-img-top item-image" alt="image of Amazon product">
-          <div class="card-body">
-            <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Your current score: <span id="score"></span></li>
+            <div class="card-body">
+              <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Your current score: <span id="score"></span></li>
               <li class="list-group-item">
                 <span class="heart" class="heart-1"></span>
                 <span class="heart" class="heart-2"></span>
@@ -108,6 +122,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="load-screen">
+    <h3 id="loading">Loading...</h3>
   </div>
 </body>
 

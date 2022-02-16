@@ -27,7 +27,7 @@ function displayProduct(productArray, i) {
   $("#score").html(player1.points);
   refreshHearts();
   $("#item-title").html(productArray[i].title);
-  $(".item-image").attr('src', `${productArray[i].image}`);
+  $(".item-image").attr('src', `${productArray[i].image}`)
 }
 
 function displayPrice(userGuess, price) {
@@ -43,16 +43,23 @@ function displayPrice(userGuess, price) {
 $(document).ready(function() { 
   let productArray;
   let i = 0;
-
   $("#start-game").on('click', function() {
-    // $("#video")[0].src += "?autoplay=1";
-    let searchCategory = "kitchen";
+
+    $("#video")[0].src += "?autoplay=1";
+
+    $("#intro").hide();
+    $(".load-screen").fadeIn();
+    setTimeout(function(){$(".load-screen").fadeOut();}, 3000);
+    setTimeout(function(){$("#intro").show();}, 3000);
+
+    let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {
         throw Error(`There was an unexpected error: ${response.message}`);
       }
       productArray = response.bestsellers;
       displayProduct(productArray, i);
+
     }) .catch(function(error) {
       displayErrors(error.message);
     });

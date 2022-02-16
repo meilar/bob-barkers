@@ -12,22 +12,32 @@ function displayErrors(error) {
   $("#errors").html(error);
 }
 
+function refreshHearts() {
+  if (player1.hearts === 2) {
+    $(".heart-3").addClass("hidden");
+    $("#wrong-guess").html("You went over, and lost a heart!");
+  } else if (player1.hearts === 1) {
+    $(".heart-2").addClass("hidden");
+  }
+}
+
 function displayProduct(productArray, i) {
-  $("#active-game").show();
-  $("#intro").hide();
+  $("#active-game").removeClass("hidden");
+  $("#intro").addClass("hidden");
   $("#score").html(player1.points);
-  $("#lives").html(player1.hearts);
-  $("#description").html(productArray[i].title);
-  $("#item-image").attr('src', `${productArray[i].image}`);
+  refreshHearts();
+  $("#item-title").html(productArray[i].title);
+  $(".item-image").attr('src', `${productArray[i].image}`);
 }
 
 function displayPrice(userGuess, price) {
   let points = player1.guessCheck(userGuess);
-  $("#price").html("$"+price);
-  $("guessed").html("$"+userGuess);
+  $("#actual-price").html("$"+price);
+  $("#user-guess").html("$"+userGuess);
   $("#won-points").html(points);
-  $("#result").show(); 
-  // this is for showing the price of the product and and users points gained from guess on a results screen
+  refreshHearts();
+  $("#active-game").addClass("hidden");
+  $("#result").removeClass("hidden"); 
 }
 
 $(document).ready(function() { 
@@ -35,8 +45,8 @@ $(document).ready(function() {
   let i = 0;
 
   $("#start-game").on('click', function() {
-    $("#video")[0].src += "?autoplay=1";
-    let searchCategory = //Add in Category selection buttons with endpoint values
+    // $("#video")[0].src += "?autoplay=1";
+    let searchCategory = "kitchen";
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {
         throw Error(`There was an unexpected error: ${response.message}`);
@@ -47,11 +57,14 @@ $(document).ready(function() {
       displayErrors(error.message);
     });
   });
-  $("#submit-price").on('click', function(){ // for submitting guessed price for each item
+
+  $("#guess-button").on('click', function(){ // for submitting guessed price for each item
     let userGuess = $("#price-guess").val();
+    $("#price-guess").val("");
     let price = productArray[i].price.value;
     displayPrice(userGuess, price);
   });
+
   $("#new-product").on('click', function(){ // for switching out the product and hiding the results screen
     i ++; // global variable increments every time time the function is called
     $("#results-screen").hide();

@@ -19,11 +19,6 @@ body {
   
 }
 
-/* #active-game, #game-over {
-  display: none;
-} */
-
-
 /* Matt's Style */
 
 /* .hidden {
@@ -47,7 +42,7 @@ body {
 
 .card {
   max-width: 60%;
-  min-width: 18rem;
+  min-width: 40%;
   text-align: center;
 }
 

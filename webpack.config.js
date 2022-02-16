@@ -20,7 +20,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'template',
       template: './src/index.html',
-      inject: 'body'
+      inject: 'body',
+      favicon: "./src/assets/wheel.png"
     }),
     new Dotenv()
   ],
@@ -34,17 +35,17 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|jpg|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/'
-            }
-          }
-        ]
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
+      {
+        test: /\.html$/,
+        use: [
+          'html-loader'
+        ]
+      }
     ]
   }
 };
+
+

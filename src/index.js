@@ -39,19 +39,21 @@ function displayPrice(userGuess, price) {
   $("#result").removeClass("hidden"); 
 }
 
+function loadScreen() {
+  $(".container").addClass("hidden");
+  $("#intro").addClass("hidden");
+  $(".load-screen").fadeIn();
+  setTimeout(function(){$(".load-screen").fadeOut();}, 3000);
+  setTimeout(function(){$(".container").removeClass("hidden");}, 3000);
+  setTimeout(function(){$("#active-game").removeClass("hidden");}, 3000);
+}
+
 $(document).ready(function() { 
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
     $("#video")[0].src += "?autoplay=1";
-    
-    $(".container").addClass("hidden");
-    $("#intro").addClass("hidden");
-    $(".load-screen").fadeIn();
-    setTimeout(function(){$(".load-screen").fadeOut();}, 3000);
-    setTimeout(function(){$(".container").removeClass("hidden");}, 3000);
-    setTimeout(function(){$("#active-game").removeClass("hidden");}, 3000);
-
+    loadScreen();
     let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {

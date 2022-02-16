@@ -10,21 +10,20 @@ export default class Player {
     const eightPoint = itemPrice * 0.8;
     const sixPoint = itemPrice * 0.6;
     const fourPoint = itemPrice * 0.4;
-    
-    if (playerGuess < tenPoint) {
+    if (playerGuess > tenPoint) {
       this.hearts -= 1;
     } else if (playerGuess === tenPoint) {
       this.points += 10;
-    } else if (playerGuess >= eightPoint) {
+    } else if (playerGuess <= eightPoint) {
       this.points += 8;
-    } else if (playerGuess >= sixPoint) {
+    } else if (playerGuess <= sixPoint) {
       this.points += 6;
-    } else if (playerGuess >= fourPoint) {
+    } else if (playerGuess <= fourPoint) {
       this.points += 4;
     } else {
       this.points += 2;
     }
-    this.turn += 1;
+    this.turns += 1;
   }
 
   endLogic() {

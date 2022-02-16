@@ -27,7 +27,7 @@ function displayProduct(productArray, i) {
   $("#score").html(player1.points);
   refreshHearts();
   $("#item-title").html(productArray[i].title);
-  $(".item-image").attr('src', `${productArray[i].image}`)
+  $(".item-image").attr('src', `${productArray[i].image}`);
 }
 
 function displayPrice(userGuess, price) {

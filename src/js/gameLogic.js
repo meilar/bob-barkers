@@ -6,15 +6,16 @@ export default class Player {
   }
 
   guessCheck(playerGuess, itemPrice) {
+    this.turns += 1;
     let operator = itemPrice/10;
     let points = parseInt(playerGuess/operator);
     if (playerGuess > itemPrice) {
+      this.hearts -= 1;
       return 0;
     } else if (points > 0) {
       this.points += points;
       return points;
     } else {
-      this.turns += 1;
       return 1;
     }
   }

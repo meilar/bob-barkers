@@ -65,6 +65,7 @@ function loadScreen() {
   setTimeout(function(){$("#active-game").removeClass("hidden");}, 4000);
 }
 
+
 $(document).ready(function() { 
   let productArray;
   let i = 0;

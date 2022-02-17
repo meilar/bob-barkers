@@ -9,16 +9,18 @@ body {
   background: linear-gradient(red, purple);
   opacity: .85;
   padding: 10px;
-  margin-top: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   border-radius: 10px;
 }
 .hidden {
   display: none;
 }
 .card {
-  max-width: 60%;
-  min-width: 40%;
+  width: 60%;
+  min-width: 50px;
   text-align: center;
+  margin-bottom: 5%;
 }
 .card h5 {
   margin-top: .5em;
@@ -97,18 +99,4 @@ body {
   border-radius: 10px;
   width: 60%;
 }
-
-/* #game-over-screen {
-  display: none;
-  z-index: 2;
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(-50% -50%);
-  background-color: aliceblue;
-  text-align: center;
-} */
-
 

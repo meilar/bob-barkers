@@ -28,10 +28,10 @@ function endGame() {
 
 function refreshHearts() {
   if (player1.hearts === 2) {
-    $(".heart-3").addClass("hidden");
+    $(".heart-3").hide();
     $("#wrong-guess").html("You went over, and lost a heart!");
   } else if (player1.hearts === 1) {
-    $(".heart-2").addClass("hidden");
+    $(".heart-2").hide();
     $("#wrong-guess").html("You went over, and lost a heart!");
   }
 }
@@ -113,10 +113,6 @@ $(document).ready(function() {
     $("#result").addClass("hidden");
     $("#active-game").removeClass("hidden");
     displayProduct(productArray, i);
-  });
-
-  $("#header").on('click', function () {
-    location.reload();
   });
 
 });

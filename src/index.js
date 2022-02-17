@@ -45,11 +45,15 @@ function displayProduct(productArray, i) {
   $(".item-image").attr('src', `${productArray[i].image}`);
 }
 
-function displayPrice(userGuess, itemPrice) {
-  let points = player1.guessCheck(userGuess, itemPrice);
+function displayPrice(userGuess, itemPrice, points) {
   $("#actual-price").html("$"+itemPrice);
   $("#user-guess").html("$"+userGuess);
-  $("#won-points").html(points);
+  if (points >0) {
+    $("#won-points").text(`Great guess! You won ${points} points!`);
+  } else {
+    $("#won-points").text("I'm sorry, your guess was more than the list price of the item. You have lost one heart. Better luck next time!");
+  }
+
   refreshHearts();
   $("#active-game").addClass("hidden");
   $("#result").removeClass("hidden"); 
@@ -72,7 +76,8 @@ $(document).ready(function() {
   $("#start-game").on('click', function() {
     // $("#video")[0].src += "?autoplay=1";
     loadScreen();
-    let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
+    let searchCategory = $("input:radio[name=searchCategory]:checked").val();
+
     AmazonService.makeAPICall(searchCategory).then(function(response) {
       if (response instanceof Error) {
         throw Error(`There was an unexpected error: ${response.message}`);
@@ -99,8 +104,9 @@ $(document).ready(function() {
   $("#guess-button").on('click', function(){ // for submitting guessed price for each item
     let userGuess = parseFloat($("#price-guess").val());
     $("#price-guess").val("");
+    let points = player1.guessCheck(userGuess, itemPrice);
     let itemPrice = productArray[i].price.value;
-    displayPrice(userGuess, itemPrice);
+    displayPrice(userGuess, itemPrice, points);
   });
 
   $("#next-round").on('click', function(){ // for switching out the product and hiding the results screen
@@ -108,6 +114,10 @@ $(document).ready(function() {
     $("#result").addClass("hidden");
     $("#active-game").removeClass("hidden");
     displayProduct(productArray, i);
+  });
+
+  $("#header").on('click', function () {
+    location.reload();
   });
 
 });

@@ -37,13 +37,11 @@ export default class Player {
   }
 
   endLogic() {
-    if (this.heart === 0) {
-      return "you lose ):";
+    if (this.hearts === 0) {
+      return false;
     }
-    if (this.turn === 5) {
-      this.turn = 0;
+    if (this.turns === 5) {
       return true;
     } 
-    return;
   }
 }

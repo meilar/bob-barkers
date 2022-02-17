@@ -21,7 +21,7 @@ module.exports = {
       title: 'template',
       template: './src/index.html',
       inject: 'body',
-      favicon: "./src/assets/wheel.png"
+      favicon: "./src/assets/price.png"
     }),
     new Dotenv()
   ],

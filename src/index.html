@@ -9,17 +9,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Lato&family=Lobster&display=swap"
     rel="stylesheet">
-  <link rel="icon" href="./assets/wheel.png">
+  <link rel="icon" href="./assets/price.png">
   <title>The Everything $tore</title>
 </head>
 
 <body>
   <div class="container">
+
     <div class="row" id="header">
       <div class="col">
         <h1>The Everything $tore</h1>
       </div>
     </div>
+
     <div class="row" id="intro">
       <div class="d-flex justify-content-center">
         <div class="card">
@@ -69,6 +71,7 @@
         </div>
       </div>
     </div>
+
     <div class="row hidden" id="active-game">
       <div class="d-flex justify-content-center">
         <div class="card">
@@ -76,7 +79,7 @@
           <div class="card-body">
             <h5 id="item-title" class="card-title">ITEM NAME GOES HERE</h5>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Your current score: <span id="score"></span></li>
+              <li class="list-group-item">Your current score: <span class="score"></span></li>
               <li class="list-group-item">
                 <span class="heart heart-1"></span>
                 <span class="heart heart-2"></span>
@@ -92,6 +95,7 @@
         </div>
       </div>
     </div>
+    
     <div class="row hidden" id="result">
       <div class="d-flex justify-content-center">
         <div class="card">
@@ -108,13 +112,14 @@
                 <span class="heart heart-2"></span>
                 <span class="heart heart-3"></span>
               </li>
-              <li class="list-group-item"><button id="next-round" class="btn btn-primary">Next Round!</button></li>
+              <li class="list-group-item"><button id="next-round" class="btn btn-primary">Next Round!</button><button id="new-category" class="btn btn-success">New Category</button></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="row hidden" id="game-over">
+
+    <div class="row hidden" id="game-over-screen">
       <div class="d-flex justify-content-center">
         <div class="card">
           <img
@@ -123,20 +128,41 @@
           <div class="card-body">
             <h5 class="card-title">No Showcase winner today!</h5>
             <p class="card-text">Thank you for playing <strong>The Everything Store!</strong> Your final score was
-              <span id="final-score"></span>. We hope you'll tune in tomorrow for another game.
+              <span class="score"></span>. We hope you'll tune in tomorrow for another game.
             </p>
             <p class="card-text">And remember, help control the pet population. Have your pet spayer or neutered.
               Goodbye, everyone!</p>
-            <button class="btn btn-primary">Play again.</button>
+            <button id="reset-game" class="btn btn-primary">Play again.</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="load-screen">
-    <h3 id="loading">Loading...</h3>
+  <div class="row hidden" id="won-game">
+    <div class="d-flex justify-content-center">
+      <div class="card">
+        <img
+          src="https://assets.considerable.com/wp-content/uploads/2020/02/12101649/price-is-right-drew-carey-746x420.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Congratulations! You're todays Winner!!</h5>
+          <p class="card-text">Thank you for playing <strong>The Everything Store!</strong> Your score Is
+            <span class="score"></span>. We hope to see you up on stage again.
+          </p>
+          <p class="card-text">And remember, help control the pet population. Have your pet spayer or neutered.
+            Goodbye, everyone!</p>
+          <button id="new-category" class="btn btn-success">Choose new category</button>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+  <div class="load-screen">
+    <h2 id="loading">Loading...</h2>
+  </div>
+</div>
 </body>
 
 </html>

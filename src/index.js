@@ -11,6 +11,21 @@ function displayErrors(error) {
   $("#errors").html(error);
 }
 
+function endGame() {
+  if (player1.endLogic() === false) {
+    $("#game-over-screen").fadeIn();
+    $("#result").addClass("hidden"); 
+    $("#active-game").addClass("hidden");
+    $(".score").html(player1.points);
+  }   
+  else if (player1.endLogic() === true) {
+    $("#won-game").fadeIn();
+    $("#result").addClass("hidden"); 
+    $("#active-game").addClass("hidden");
+    $(".score").html(player1.points);
+  }
+}
+
 function refreshHearts() {
   if (player1.hearts === 2) {
     $(".heart-3").hide();
@@ -24,7 +39,7 @@ function refreshHearts() {
 function displayProduct(productArray, i) {
   $("#active-game").removeClass("hidden");
   $("#intro").addClass("hidden");
-  $("#score").html(player1.points);
+  $(".score").html(player1.points);
   refreshHearts();
   $("#item-title").html(productArray[i].title);
   $(".item-image").attr('src', `${productArray[i].image}`);
@@ -38,6 +53,7 @@ function displayPrice(userGuess, itemPrice) {
   refreshHearts();
   $("#active-game").addClass("hidden");
   $("#result").removeClass("hidden"); 
+  endGame();
 }
 
 function loadScreen() {
@@ -53,7 +69,7 @@ $(document).ready(function() {
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
-    $("#video")[0].src += "?autoplay=1";
+    // $("#video")[0].src += "?autoplay=1";
     loadScreen();
     let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
     AmazonService.makeAPICall(searchCategory).then(function(response) {
@@ -66,6 +82,17 @@ $(document).ready(function() {
     }).catch(function(error) {
       displayErrors(error.message);
     });
+    
+  });
+
+  $("#new-category").on('click', function() {
+    $("#game-over-screen").hide();
+    $("#result").addClass("hidden"); 
+    $("#intro").removeClass("hidden");
+  });
+  
+  $("#reset-game").on('click', function() {
+    location.reload();
   });
 
   $("#guess-button").on('click', function(){ // for submitting guessed price for each item

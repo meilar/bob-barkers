@@ -48,12 +48,15 @@ function loadScreen() {
   setTimeout(function(){$(".container").removeClass("hidden");}, 4000);
   setTimeout(function(){$("#active-game").removeClass("hidden");}, 4000);
 }
+function cleanStart() {
+  location.reload();
+}
 
 $(document).ready(function() { 
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
-    $("#video")[0].src += "?autoplay=1";
+    // $("#video")[0].src += "?autoplay=1";
     loadScreen();
     let searchCategory = $("input:radio[name=searchCategory]:checked").val(); // Add in Category selection
     AmazonService.makeAPICall(searchCategory).then(function(response) {
@@ -66,6 +69,10 @@ $(document).ready(function() {
     }) .catch(function(error) {
       displayErrors(error.message);
     });
+
+    //Refresh the page when user clicks on header
+    $("#header").addEventListener("click", cleanStart);
+    
   });
 
   $("#guess-button").on('click', function(){ // for submitting guessed price for each item

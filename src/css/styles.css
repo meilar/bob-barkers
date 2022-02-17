@@ -1,6 +1,7 @@
 body {
-  background-image: linear-gradient(to bottom,  
-     rgba(124, 40, 145, 0.6), rgba(255, 255, 255, .4)), url("https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg"); 
+  background-image:  
+    linear-gradient(to bottom, rgba(124, 40, 145, 0.6), rgba(255, 255, 255, .4)),
+    url('https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg');
 }
 .container {
   text-align: center;
@@ -11,37 +12,18 @@ body {
   margin-top: 40px;
   border-radius: 10px;
 }
-
 .hidden {
   display: none;
 }
-
-#header {
-  margin:auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  padding: 10px;
-  font-family: 'Lobster', cursive;
-  
-  text-align: center;
-  background-color: yellow;
-  opacity: .9;
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 60%;
-}
-
 .card {
   max-width: 60%;
   min-width: 40%;
   text-align: center;
 }
-
 .card h5 {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-
 .card p {
   text-align: justify;
   font-weight: 400;
@@ -50,7 +32,6 @@ body {
 .categories {
  text-align: left;
 }
-
 .heart {
   background-color: red;
   display: inline-block;
@@ -62,9 +43,7 @@ body {
   width: 25px;
   margin-top: 4px;
   margin-bottom: 2px;
-
 }
-
 .heart:before,
 .heart:after {
   content: "";
@@ -74,25 +53,20 @@ body {
   position: absolute;
   width: 25px;
 }
-
 .heart:before {
   top: -12px;
   left: 0;
 }
-
 .heart:after {
   left: 12px;
   top: 0;
 }
-
 .heart .dead {
   background-color: gray;
 }
-
 .heart:after .dead {
   background-color: gray;
 }
-
 .load-screen {
   display: none;
   width: 100vw;
@@ -109,4 +83,17 @@ body {
   font-weight:bold;
   font-size: large;
   transform: translate(-50% -50%);
+}
+#header {
+  margin:auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 10px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  background-color: yellow;
+  opacity: .9;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60%;
 }

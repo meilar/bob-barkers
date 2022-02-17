@@ -6,33 +6,14 @@ export default class Player {
   }
 
   guessCheck(playerGuess, itemPrice) {
-    const tenPoint = itemPrice;
-    const eightPoint = itemPrice * 0.8;
-    const sixPoint = itemPrice * 0.6;
-    const fourPoint = itemPrice * 0.4;
-    if (playerGuess > tenPoint) {
-      this.hearts -= 1;
-      this.turns += 1;
-    } else if (playerGuess === tenPoint) {
-      this.points += 10;
-      this.turns += 1;
-      return 10;
-    } else if (playerGuess >= eightPoint) {
-      this.points += 8;
-      this.turns += 1;
-      return 8;
-    } else if (playerGuess >= sixPoint) {
-      this.points += 6;
-      this.turns += 1;
-      return 6;
-    } else if (playerGuess >= fourPoint) {
-      this.points += 4;
-      this.turns += 1;
-      return 4;
+    let operator = itemPrice/10;
+    let points = parseInt(playerGuess/operator);
+    if (playerGuess >= itemPrice) {
+      return 0;
+    } else if (points > 0) {
+      return points;
     } else {
-      this.points += 2;
-      this.turns += 1;
-      return 2;
+      return 1;
     }
   }
 

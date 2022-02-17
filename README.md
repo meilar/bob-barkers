@@ -12,9 +12,9 @@ Mikah Mathews | [LinkedIn](https://www.linkedin.com/in/mikah-mathews/) | [email]
 
 
 ## About this project
-{SCREENSHOT}
+![screenshot of project](/everything-screenshot.jpg)
 
-This is the devils work
+This project was created as a team week project to mark the end of our Epicodus Intermediate JavaScript module. We created a simple game based on The Price Is Right, inviting the player to guess the price of Amazon items. Inspiration for this project came from Tom Watson's [Wikitrivia](https://wikitrivia.tomjwatson.com/). 
 
 ## Get Started
 
@@ -27,7 +27,7 @@ This is the devils work
 
 ### The Easy Way
 
-[View the hosted version of this page on Github Pages.](https://meilar.github.io/{CHANGE_ME})
+[View the hosted version of this page on Github Pages.](https://meilar.github.io/bob-barkers)
 
 ## Technologies Used
 
@@ -38,6 +38,7 @@ This site incorporates the following frameworks and languages:
 - jQuery 3.6.0
 - Bootstrap 4.5
 - Node Package Manager/Node.js
+- Webpack 5
 - A full list of libraries and dependencies can be viewed on this project's `package.json` configuration file
 
 The following development tools were used to develop this page:
@@ -48,13 +49,12 @@ The following development tools were used to develop this page:
 
 
 ## Known Issues
-* Does not always correctly identify when price has gone over
-* Does not return 0 when price is recognized as over - "You got points" -> "You got 0 points"
-* Only able to make 12 calls in Tools & Home Improvement
-* If down to one heart and make an overestimate guess, lose page does not show and player can keep going
 * Accepts 0 and negative numbers
 
 ## Acknowledgements
+- Thank you to my boyfriend Alex for support in all ways, to my parents Eric and Socorro for encouraging technology exploration, even when resources were scarce, and to the Kohlenbergs, for making it possible for me to attend this program this year. - Matt
+- Thank you to my Mom and Dad, who have supported me through everything and encouraged me. - Mikah
+- Thanks to my family for supporting me through Epicodus! - Josh
+- I'm grateful to my spouse and friends for encouraging me to enroll at Epicodus. - Kevin
 
-Thank you to my partner, Alex, for support in all ways. Thank you to my parents for encouraging technology exploration, even when resources were scarce. Thank you to the Kohlenberg Foundation for {CHANGE ME}.
 

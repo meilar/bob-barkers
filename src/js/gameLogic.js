@@ -38,7 +38,7 @@ export default class Player {
 
   endLogic() {
     if (this.heart === 0) {
-      return "lose";
+      return "you lose ):";
     }
     if (this.turn === 5) {
       this.turn = 0;

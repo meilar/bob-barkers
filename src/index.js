@@ -63,7 +63,7 @@ $(document).ready(function() {
       productArray = response.bestsellers;
       displayProduct(productArray, i);
 
-    }) .catch(function(error) {
+    }).catch(function(error) {
       displayErrors(error.message);
     });
   });

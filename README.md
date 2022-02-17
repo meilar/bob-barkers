@@ -56,6 +56,6 @@ The following development tools were used to develop this page:
 - Thank you to my Mom and Dad, who have supported me through everything and encouraged me. - Mikah
 - Thanks to my family for supporting me through Epicodus! - Josh
 - I'm grateful to my spouse and friends for encouraging me to enroll at Epicodus. - Kevin
-- Thank you to my brother Lauden for encouraging me to pursue a career in tech and alwasy beleiving in me. You're a great brother and a better friend. - Liam
+- Thank you to my brother Lauden for encouraging me to pursue a career in tech and always believing in me. You're a great brother and a better friend. - Liam
 
 

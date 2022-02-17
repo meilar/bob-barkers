@@ -50,9 +50,9 @@ The following development tools were used to develop this page:
 ## Known Issues
 * Does not always correctly identify when price has gone over
 * Does not return 0 when price is recognized as over - "You got points" -> "You got 0 points"
-* Office Product selection does not call API
 * Only able to make 12 calls in Tools & Home Improvement
 * If down to one heart and make an overestimate guess, lose page does not show and player can keep going
+* Accepts 0 and negative numbers
 
 ## Acknowledgements
 

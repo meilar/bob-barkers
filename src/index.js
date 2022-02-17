@@ -48,9 +48,7 @@ function loadScreen() {
   setTimeout(function(){$(".container").removeClass("hidden");}, 4000);
   setTimeout(function(){$("#active-game").removeClass("hidden");}, 4000);
 }
-function cleanStart() {
-  location.reload();
-}
+
 
 $(document).ready(function() { 
   let productArray;
@@ -71,7 +69,9 @@ $(document).ready(function() {
     });
 
     //Refresh the page when user clicks on header
-    $("#header").addEventListener("click", cleanStart);
+    $("#header").on('click', function () {
+      location.reload();
+    });
     
   });
 

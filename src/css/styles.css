@@ -2,6 +2,7 @@ body {
   background-image:  
     linear-gradient(to bottom, rgba(124, 40, 145, 0.6), rgba(255, 255, 255, .4)),
     url('https://assets.wallpapersin4k.org/uploads/2017/04/Price-Is-Right-Wallpaper-8.jpg');
+    background-size: cover;
 }
 .container {
   text-align: center;
@@ -9,16 +10,18 @@ body {
   background: linear-gradient(red, purple);
   opacity: .85;
   padding: 10px;
-  margin-top: 40px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   border-radius: 10px;
 }
 .hidden {
   display: none;
 }
 .card {
-  max-width: 60%;
-  min-width: 40%;
+  width: 60%;
+  min-width: 50px;
   text-align: center;
+  margin-bottom: 5%;
 }
 .card h5 {
   margin-top: .5em;
@@ -96,4 +99,5 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   width: 60%;
+  cursor:pointer;
 }

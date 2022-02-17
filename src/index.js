@@ -48,12 +48,11 @@ function displayProduct(productArray, i) {
 function displayPrice(userGuess, itemPrice, points) {
   $("#actual-price").html("$"+itemPrice);
   $("#user-guess").html("$"+userGuess);
-  if (points >0) {
+  if (points > 0) {
     $("#won-points").text(`Great guess! You won ${points} points!`);
   } else {
     $("#won-points").text("I'm sorry, your guess was more than the list price of the item. You have lost one heart. Better luck next time!");
   }
-
   refreshHearts();
   $("#active-game").addClass("hidden");
   $("#result").removeClass("hidden"); 
@@ -74,7 +73,7 @@ $(document).ready(function() {
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
-    // $("#video")[0].src += "?autoplay=1";
+    $("#video")[0].src += "?autoplay=1";
     loadScreen();
     let searchCategory = $("input:radio[name=searchCategory]:checked").val();
 
@@ -101,16 +100,16 @@ $(document).ready(function() {
     location.reload();
   });
 
-  $("#guess-button").on('click', function(){ // for submitting guessed price for each item
+  $("#guess-button").on('click', function(){ 
     let userGuess = parseFloat($("#price-guess").val());
     $("#price-guess").val("");
-    let points = player1.guessCheck(userGuess, itemPrice);
     let itemPrice = productArray[i].price.value;
+    let points = player1.guessCheck(userGuess, itemPrice);
     displayPrice(userGuess, itemPrice, points);
   });
 
-  $("#next-round").on('click', function(){ // for switching out the product and hiding the results screen
-    i ++; // global variable increments every time time the function is called
+  $("#next-round").on('click', function(){ 
+    i ++; 
     $("#result").addClass("hidden");
     $("#active-game").removeClass("hidden");
     displayProduct(productArray, i);

@@ -18,16 +18,12 @@ This project was created as a team week project to mark the end of our Epicodus 
 
 ## Get Started
 
-### The Hard Way
 - Ensure that you have installed the latest versions of Git ([instructions](https://github.com/git-guides/install-git)) and Node.js ([instructions](https://nodejs.org/en/download/))
 - In your command line, clone this repository using `$ git clone https://github.com/meilar/{CHANGE_ME}`
 - Navigate to the project directory, then install the reqired project dependencies with `$ npm init` followed by `$ npm install` 
 - To run test suites, use the command `$ npm run test` 
 - To build and view the project in your default browser, use the command `$ npm run start` to deploy a webpack development server. Please note that Google Chrome may be required to use all features. 
 
-### The Easy Way
-
-[View the hosted version of this page on Github Pages.](https://meilar.github.io/bob-barkers)
 
 ## Technologies Used
 

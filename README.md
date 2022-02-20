@@ -21,6 +21,7 @@ This project was created as a team week project to mark the end of our Epicodus 
 - Ensure that you have installed the latest versions of Git ([instructions](https://github.com/git-guides/install-git)) and Node.js ([instructions](https://nodejs.org/en/download/))
 - In your command line, clone this repository using `$ git clone https://github.com/meilar/{CHANGE_ME}`
 - Navigate to the project directory, then install the reqired project dependencies with `$ npm init` followed by `$ npm install` 
+- This project requires a [Rainforest API](https://www.rainforestapi.com/) key to get item data. This key must be stored in the following format `API_KEY = {your_key_goes_here}` in a file called `.env` stored in the project's root directory. If an API key is not stored in exactly this format, name, and location, the project will not function correctly.
 - To run test suites, use the command `$ npm run test` 
 - To build and view the project in your default browser, use the command `$ npm run start` to deploy a webpack development server. Please note that Google Chrome may be required to use all features. 
 

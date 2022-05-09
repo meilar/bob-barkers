@@ -59,22 +59,14 @@ function displayPrice(userGuess, itemPrice, points) {
   endGame();
 }
 
-function loadScreen() {
-  $(".container").addClass("hidden");
-  $("#intro").addClass("hidden");
-  $(".load-screen").fadeIn();
-  setTimeout(function(){$(".load-screen").fadeOut();}, 4000);
-  setTimeout(function(){$(".container").removeClass("hidden");}, 4000);
-  setTimeout(function(){$("#active-game").removeClass("hidden");}, 4000);
-}
-
-
 $(document).ready(function() { 
   let productArray;
   let i = 0;
   $("#start-game").on('click', function() {
     $("#video")[0].src += "?autoplay=1";
-    loadScreen();
+    $(".container").addClass("hidden");
+    $("#intro").addClass("hidden");
+    $(".load-screen").fadeIn();
     let searchCategory = $("input:radio[name=searchCategory]:checked").val();
 
     AmazonService.makeAPICall(searchCategory).then(function(response) {
@@ -83,6 +75,9 @@ $(document).ready(function() {
       }
       productArray = response.bestsellers;
       displayProduct(productArray, i);
+      $(".load-screen").fadeOut();
+      $(".container").removeClass("hidden");
+      $("#active-game").removeClass("hidden");
 
     }).catch(function(error) {
       displayErrors(error.message);
@@ -93,6 +88,11 @@ $(document).ready(function() {
   $("#new-category").on('click', function() {
     $("#game-over-screen").hide();
     $("#result").addClass("hidden"); 
+    $("#intro").removeClass("hidden");
+  });
+
+  $("#play-again").on('click', function() {
+    $("#won-game").hide();
     $("#intro").removeClass("hidden");
   });
   

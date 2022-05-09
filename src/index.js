@@ -95,6 +95,11 @@ $(document).ready(function() {
     $("#result").addClass("hidden"); 
     $("#intro").removeClass("hidden");
   });
+
+  $("#play-again").on('click', function() {
+    $("#won-game").hide();
+    $("#intro").removeClass("hidden");
+  });
   
   $("#reset-game").on('click', function() {
     location.reload();

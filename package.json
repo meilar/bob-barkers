@@ -7,7 +7,8 @@
     "build": "webpack --mode development",
     "start": "npm run build && webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +33,7 @@
     "@popperjs/core": "^2.11.2",
     "bootstrap": "^5.1.3",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "jquery": "^3.6.0"
   }
 }

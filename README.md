@@ -4,7 +4,7 @@ Matthew Eilar | [LinkedIn](https://www.linkedin.com/in/eilar-503/) | [email](mai
 
 Kevin Williams | [LinkedIn](https://linkedin.com/in/k9w) | [Twitter](https://twitter.com/k9w)
 
-Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email](mailto:<liamthelastson@gmail.com>) | [website](https://lionturtle99.github.io/my-portfolio/)
+Liam Eller | [LinkedIn](https://www.linkedin.com/in/liamellerportland/) | [email](mailto:<liamthelastson@gmail.com>) | [website](https://lionturtle99.github.io/react-portfolio/)
 
 Josh Tillinghast | [LinkedIn](https://www.linkedin.com/in/jwtill/) | [email](mailto:<jwtill@icloud.com>) 
 
@@ -18,12 +18,13 @@ This project was created as a team week project to mark the end of our Epicodus 
 
 ## Get Started
 
+###### The ```$``` indicates it's written in your command line.
+
 - Ensure that you have installed the latest versions of Git ([instructions](https://github.com/git-guides/install-git)) and Node.js ([instructions](https://nodejs.org/en/download/))
-- In your command line, clone this repository using `$ git clone https://github.com/meilar/{CHANGE_ME}`
-- Navigate to the project directory, then install the reqired project dependencies with `$ npm init` followed by `$ npm install` 
-- This project requires a [Rainforest API](https://www.rainforestapi.com/) key to get item data. This key must be stored in the following format `API_KEY = {your_key_goes_here}` in a file called `.env` stored in the project's root directory. If an API key is not stored in exactly this format, name, and location, the project will not function correctly.
-- To run test suites, use the command `$ npm run test` 
-- To build and view the project in your default browser, use the command `$ npm run start` to deploy a webpack development server. Please note that Google Chrome may be required to use all features. 
+- In your command line, clone this repository using ```$ git clone https://github.com/lionturtle99/Bob_Barker.git```
+- Navigate to the project directory, then install the reqired project dependencies with ```$ npm install```.
+- This project requires a [Rainforest API](https://www.rainforestapi.com/) key to get item data. This key must be stored in the following format ```API_KEY = {your_key_goes_here}``` in a file called `.env` stored in the project's root directory. If an API key is not stored in exactly this format, name, and location, the project will not function correctly.
+- To build and view the project in your default browser, use the command ```$ npm run start``` to deploy a webpack development server. Please note that Google Chrome may be required to use all features.
 
 
 ## Technologies Used
@@ -54,5 +55,3 @@ The following development tools were used to develop this page:
 - Thanks to my family for supporting me through Epicodus! - Josh
 - I'm grateful to my spouse and friends for encouraging me to enroll at Epicodus. - Kevin
 - Thank you to my brother Lauden for encouraging me to pursue a career in tech and always believing in me. You're a great brother and a better friend. - Liam
-
-
